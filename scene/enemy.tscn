@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cymeu3buqe6am"]
+
+[ext_resource type="Script" uid="uid://b6v8j0ypttn1q" path="res://script/enemy.gd" id="1_8u16h"]
+[ext_resource type="Texture2D" uid="uid://c5n1pk0m6e12y" path="res://assets/sprites/slime_purple.png" id="1_h08p8"]
+[ext_resource type="PackedScene" uid="uid://ytqgp55vdbpd" path="res://scene/killzone.tscn" id="2_f87vc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f87vc"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u16h"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7koy"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvcfn"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0s4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f87vc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u16h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7koy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvcfn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0s4m"]
+size = Vector2(13, 11.5)
+
+[node name="Enemy" type="Node2D" unique_id=881149330]
+script = ExtResource("1_8u16h")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2074994609]
+position = Vector2(-2, -8)
+target_position = Vector2(10, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1703990257]
+position = Vector2(1.9999999, -9)
+scale = Vector2(-1.2549877, 1)
+target_position = Vector2(7.9682055, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=854294267]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_v0s4m")
+autoplay = "default"
+frame_progress = 0.52481353
+
+[node name="killzone" parent="." unique_id=1112892071 instance=ExtResource("2_f87vc")]
+position = Vector2(-22, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1035204627]
+position = Vector2(21.5, 1.75)
+shape = SubResource("RectangleShape2D_v0s4m")
