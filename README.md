@@ -38,4 +38,5 @@ Download the latest Windows build from the [Releases](../../releases) page, unzi
 * Art, music, and sound assets: Brackeys
 
 ## 
+<img width="1048" height="582" alt="Gameplay" src="https://github.com/user-attachments/assets/c2c3ba63-09c8-4164-92c1-bd9d9ae2fd4c" />
 
