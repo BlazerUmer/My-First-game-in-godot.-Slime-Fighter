@@ -1,5 +1,4 @@
 # First Game
-
 A 2D platformer built with the Godot Engine. Run, jump, collect coins, and avoid the slimes patrolling the platforms.
 
 ## Features
@@ -19,21 +18,7 @@ Download the latest Windows build from the [Releases](../../releases) page, unzi
 |Action|Key|
 |-|-|
 |Move left / right|Arrow keys or A / D|
-|Jump|Space|
-
-
-
-## Run from Source
-
-1. Install [Godot 4](https://godotengine.org/download).
-2. Clone the repository:
-
-```bash
-   git clone https://github.com/<your-username>/<your-repo>.git
-   ```
-
-3. Open Godot, click **Import**, and select the `project.godot` file.
-4. Press **F5** to run the game.
+|Jump|Space
 
 ## Project Structure
 
