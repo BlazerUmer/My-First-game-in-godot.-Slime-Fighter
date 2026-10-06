@@ -8,6 +8,7 @@ A 2D platformer built with the Godot Engine. Run, jump, collect coins, and avoid
 * Collectible coins
 * Kill zones that restart the level when the player dies
 * Pixel-art sprites, music, and sound effects
+* A looping Ui consisting of start and exit.
 
 ## Play the Game
 

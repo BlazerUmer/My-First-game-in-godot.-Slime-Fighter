@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://cifkosi8vqtix"]
+
+[ext_resource type="Script" uid="uid://48mx1b0o410c" path="res://script/control.gd" id="1_8g54p"]
+[ext_resource type="Texture2D" uid="uid://dd5n20xwlcf1y" path="res://assets/sprites/Screenshot 2026-10-06 165149.png" id="1_mnow5"]
+[ext_resource type="FontFile" uid="uid://jgv88f60q8tg" path="res://assets/fonts/PixelOperator8.ttf" id="1_vrdfc"]
+[ext_resource type="FontFile" uid="uid://cuhjqidghnmi2" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_f676y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql73s"]
+texture = ExtResource("1_mnow5")
+modulate_color = Color(0.68804306, 0.68804306, 0.688043, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ql73s"]
+bg_color = Color(0.40668783, 0.43577635, 0.5447132, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrdfc"]
+bg_color = Color(0.13655293, 0.2770859, 0.30686548, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnow5"]
+bg_color = Color(0.0117021045, 0.011702111, 0.011702098, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Main screen" type="Control" unique_id=1557247398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8g54p")
+
+[node name="Panel" type="Panel" parent="." unique_id=1139497626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ql73s")
+
+[node name="Button" type="Button" parent="." unique_id=490873881]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -137.0
+offset_right = -73.20288
+offset_bottom = -115.27382
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.7600002, 3.360002)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vrdfc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ql73s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vrdfc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mnow5")
+text = "Start Game!"
+
+[node name="Button2" type="Button" parent="." unique_id=1984305743]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.99997
+offset_top = 830.0
+offset_right = -46.55066
+offset_bottom = 854.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.7600002, 3.360002)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vrdfc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ql73s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vrdfc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mnow5")
+text = "Options"
+
+[node name="Button3" type="Button" parent="." unique_id=33729019]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = 82.0
+offset_right = -65.6087
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.7600002, 3.360002)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_vrdfc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ql73s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vrdfc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mnow5")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=22062984]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 49.0
+offset_right = 1022.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+theme_override_colors/font_shadow_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = -1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_f676y")
+theme_override_font_sizes/font_size = 64
+text = "Slime Fighter"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_exit_pressed"]

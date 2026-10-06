@@ -4,8 +4,10 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	print("You Died")
-	Engine.time_scale=0.5
 	timer.start()
+	
+	if body.name == "player":
+		get_tree().change_scene_to_file("res://scene/control.tscn")
 
 	# your existing kill code below
 
